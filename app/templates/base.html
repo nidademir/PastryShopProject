@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cake Delights Web Template</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/static/css/ie8.css"/>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="/static/css/ie7.css"/>
+    <![endif]-->
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="/static/css/ie6.css"/>
+    <![endif]-->
+</head>
+<body>
+<div id="header">
+    <div>
+        <div>
+            <div id="logo">
+                <h1><a href="{{ url_for('Index') }}"><img src="/static/images/logo2.jpg" alt="Logo"/></a></h1>
+            </div>
+            <div>
+                <div>
+                    <a href="{{ url_for('SignUp') }}">Üye Ol</a>
+                    <a href="{{ url_for('Index') }}">Yardım</a>
+                    {% if login_auth == False %}
+                    <a href="{{ url_for('Login') }}" class="last">Giriş Yap</a>
+                    {% else %}
+                    <a href="{{ url_for('Logout') }}" class="button alt"> {{ email }} - Çıkış Yap</a>
+                    {% endif %}
+                </div>
+                <form action="{{ url_for('Index') }}">
+                    <input type="text" id="Ara" maxlength="30"/>
+                    <input type="submit" value="Ara" id="searchbtn"/>
+                </form>
+            </div>
+        </div>
+        <ul>
+            <li class="current"><a href="{{ url_for('Index') }}">Anasayfa</a></li>
+            <li><a href="{{ url_for('Product') }}">Mağaza</a></li>
+            <li><a href="{{ url_for('About') }}">Hakkımızda</a></li>
+            <li><a href="{{ url_for('Services') }}">Hizmetler</a></li>
+            <li><a href="{{ url_for('Blog') }}">Blog</a></li>
+            <li><a href="{{ url_for('Contact') }}">Bize Ulaşın</a></li>
+        </ul>
+
+        {% block body_content %}
+
+        {% endblock %}
+
+        <div id="navigation">
+            <div>
+                <ul>
+                    <li class="first"><a href="{{ url_for('Index') }}">yardım</a></li>
+                    <li><a href="{{ url_for('Index') }}">pasta keyfi hakkında</a></li>
+                    <li><a href="{{ url_for('Index') }}">pasta keyfi sohbet</a></li>
+                    <li><a href="{{ url_for('Index') }}">geliştiriciler</a></li>
+                    <li><a href="{{ url_for('Index') }}">gizlilik politikası</a></li>
+                    <li><a href="{{ url_for('Index') }}">kullanım şartları</a></li>
+                </ul>
+                <p>Telif hakkı &copy; 2022-2023 pasta keyfi. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

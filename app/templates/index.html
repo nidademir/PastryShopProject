@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<div id="section">
+    <ul>
+        <li><a href="{{ url_for('Index') }}">Cheesecakeler</a></li>
+        <li><a href="{{ url_for('Index') }}">Pandispanyalar</a></li>
+        <li><a href="{{ url_for('Index') }}">Tereyağlı Kekler</a></li>
+        <li class="selected"><a href="{{ url_for('Index') }}">Katmanlı Pastalar</a></li>
+        <li><a href="{{ url_for('Index') }}">Dikdörtgen Kekler</a></li>
+        <li><a href="{{ url_for('Index') }}">Kapkekler</a></li>
+        <li><a href="{{ url_for('Index') }}">Şeker Hamurlu Pastalar</a></li>
+        <li><a href="{{ url_for('Index') }}">Rulo Pastalar</a></li>
+        <li><a href="{{ url_for('Index') }}">Diğer Tatlılar</a></li>
+    </ul>
+    <a href="{{ url_for('Index') }}"><img src="/static/images/cupcake_kek.jpg" alt="Image"/></a>
+</div>
+</div>
+</div>
+<div id="content">
+    <div class="home">
+        <div class="aside">
+            <h1>Sitemize Hoşgeldiniz</h1>
+            <p>Hamur işi, un, tereyağı, katı yağ, kabartma tozu veya yumurta gibi malzemelerden yapılan çeşitli unlu
+                mamullere verilen isimdir. Küçük kekler, turtalar ve diğer tatlı unlu mamuller "hamur işleri" olarak
+                adlandırılır.</p>
+            <p>Hamur işi, bu tür unlu mamullerin yapıldığı hamuru da ifade edebilir. Börek hamuru ince açılır ve unlu
+                mamuller için altlık olarak kullanılır. Yaygın hamur işleri arasında turtalar, tartlar ve kişler
+                bulunur.
+            <p>Hamur işi, pul pul veya ufalanan bir dokuya katkıda bulunan daha yüksek yağ içeriğine sahip olmasıyla
+                ekmekten ayrılır. İyi bir hamur işi hafif, havadar ve yağlıdır, ancak dolgunun ağırlığını taşıyabilecek
+                kadar sağlamdır. Kurabiye böreği yaparken, eklemeden önce yağ ve unu iyice karıştırmaya özen
+                gösterilmelidir.</p>
+        </div>
+        <div class="section">
+            <div>
+                <h2>Yemek Hikayesi</h2>
+                <p></p>
+            </div>
+            <ul>
+                <li class="first">
+                    <a href="{{ url_for('Index') }}"><img src="/static/images/cake.jpg" alt="Image"/></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('Index') }}"><img src="/static/images/burgercake.jpg" alt="Image"/></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('Index') }}"><img src="/static/images/cupcake.jpg" alt="Image"/></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="home">
+        <div>
+            <div class="aside">
+                <div class="signup">
+                    <div>
+                        <b style="font-size:13px">Çok <span>Meşgulüm</span> alışverişe vaktim yok mu diyorsun?</b>
+                        <a style="font-size:13px" , href="{{ url_for('SignUp') }}">Ücretsiz Kaydol</a>
+                        <p style="font-size:12px">ve kapınıza teslim edelim.</p>
+                    </div>
+                </div>
+                <div class="connect">
+                    <span>Bizi Takip Edin</span>
+                    <ul>
+                        <li><a href="http://facebook.com/freewebsitetemplates" target="_blank"
+                               class="facebook">Facebook</a></li>
+                        <li><a href="http://twitter.com/fwtemplates" target="_blank" class="twitter">Twitter</a></li>
+                        <li><a href="#" class="subscribe">Subscribe</a></li>
+                        <li><a href="http://www.flickr.com/freewebsitetemplates/" target="_blank" class="flicker">Flicker</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <div>
+                    <div>
+                        <h3><a href="{{ url_for('Index') }}">Günlük Pasta Sürprizi</a></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="featured">
+        <ul>
+            <li class="first">
+                <a href="{{ url_for('Index') }}"><img src="/static/images/fruit-cake.jpg" alt="Image"/></a>
+                <h2><a href="{{ url_for('Index') }}">Nasıl saklayacağınıza dair ipuçları</a></h2>
+                <p><a href="index.html" class="readmore">read more</a></p>
+            </li>
+            <li>
+                <a href="{{ url_for('Index') }}"><img src="/static/images/italian.jpg" alt="Image"/></a>
+                <h2><a href="{{ url_for('Index') }}">Günün menüsü: İtalyan</a></h2>
+                <p><a href="index.html" class="readmore">read more</a></p>
+            </li>
+            <li>
+                <a href="{{ url_for('Index') }}"><img src="/static/images/fruit.jpg" alt="Image"/></a>
+                <h2><a href="{{ url_for('Index') }}">Diyetiniz için meyve menüsü</a></h2>
+                <p><a href="index.html" class="readmore">read more</a></p>
+            </li>
+            <li>
+                <a href="{{ url_for('Index') }}"><img src="/static/images/desserts.jpg" alt="Image"/></a>
+                <h2><a href="{{ url_for('Index') }}">Özel günler için tatlılar</a></h2>
+                <p><a href="index.html" class="readmore">read more</a></p>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
